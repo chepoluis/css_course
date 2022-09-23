@@ -24,10 +24,72 @@ html {
 }
 
 body {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+    margin: 0;
 }
 
-section {
-  background-color: blue;
+/* margin on a vertical direction collapse each other, padding no collapse */
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* It's recommended to have the links underlined, to those pepople are colorblind */
+a {
+    color: var(--magenta);
+}
+
+a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+
+/* Intro styles */
+
+#intro {
+    padding-bottom: 10rem;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--mono);
+}
+
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block; /* El nombre hace un salto de linea "block: inline" es en una sola linea */
+}
+
+#intro h2 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+/* Contact me section */
+
+#contact_me {
+    /* My solution
+    display: flex;
+    flex-direction: column;
+    text-align: center; */
+
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+/* last-child pseudo class means take the las p in the section in this case "Email me" */
+#contact_me p:last-child {
+    margin-top: 3rem;
 }
