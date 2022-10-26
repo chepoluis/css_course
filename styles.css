@@ -137,12 +137,28 @@ nav li:first-child {
     text-align: center;
 }
 
+/* 
+    It's called the "attribute selector" it has more weight, because is more specific.
+    Search for some class that contains "fa-", in this case
+*/
+nav [class*="fa-"] { 
+    font-size: 150%; /* Make it 150% bigger than the base font size */
+    color: var(--aqua);
+}
+
+/* Make the icon next to my name smaller */
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+}
+
 nav a {
     color: var(--white);
     text-decoration: none;
     display: block; /* Allow us to click in all the area */
 }
 
-nav a:hover {
+nav a:hover,
+nav [class*="fa-"]:hover {
     color: var(--magenta);
 }

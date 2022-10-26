@@ -8,13 +8,39 @@
     <nav>
         <ul>
             <li>
-                <h1><a href="index.html">José Luis</a></h1>
+                <h1>
+                    <a href="index.html">
+                        <span class="fa-solid fa-cube" aria-hidden="true"></span>
+                        <span>José Luis</span>
+                    </a>
+                </h1>
             </li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="https://www.linkedin.com/in/jos%C3%A9-luis-villa-serratos-68a789162/"> <i class="fa-brands fa-linkedin"></i> Linkedin</a></li>
-            <li><a href="#projects">Github</a></li>
+            <li>
+                <a href="https://www.linkedin.com/in/jos%C3%A9-luis-villa-serratos-68a789162/"> 
+                    <span class="fa-brands fa-linkedin" aria-hidden="true"></span> 
+                    
+                    <!--
+                        sr-only = screen reader only, this class comes from fontawesome
+                        this class hides an element in call devices except for the screen readers
+
+                        Screen readers are necessary for blind people, important for partially-sighted
+                        users and helpful for people with reading disorders
+                    -->
+                    <span class="sr-only">LinkedIn</span>
+            
+                </a>
+            </li>
+            <li>
+                <a href="#projects">
+                    <!-- the <i></i> tag is not good for icons, there is no descriptive so it's better to change it to span -->
+                    <!-- aria-hidden: true, removes that element and all of it's childrend from the accesibility tree -->
+                    <span class="fa-brands fa-github-square" aria-hidden="true"></span>
+                    <span class="sr-only">Github</span>
+                </a>
+            </li>
             <li><a href="#projects">Resume</a></li>
         </ul>
     </nav>
