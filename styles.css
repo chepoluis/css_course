@@ -162,3 +162,32 @@ nav a:hover,
 nav [class*="fa-"]:hover {
     color: var(--magenta);
 }
+
+.button {
+    background-color: var(--magenta);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: var(--white);
+    background-color: var(--hotmag);
+}
+
+/* Navbar responsive */
+/* Why 850px? because extensive testing showed that this was the right point to put those xd */
+/* 
+    min-width: if the [device width] is greater than or equal to 850px, then do {...}
+*/
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto; /* Center in the middle on the page */
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
