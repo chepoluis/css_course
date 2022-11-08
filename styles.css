@@ -191,3 +191,62 @@ nav [class*="fa-"]:hover {
         margin-right: auto;
     }
 }
+
+/* footer section */
+
+/* My solution */
+/* footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h2 {
+    margin-bottom: 30px;
+}
+
+footer .links {
+    margin-bottom: 30px;
+}
+
+footer .links a {
+    text-decoration: none;
+    padding: 0 0 0 25px;
+}
+
+footer span {
+    font-size: 40px;
+}
+
+footer small {
+    margin-bottom: 10px;
+    font-size: 15px;
+} */
+
+footer {
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
