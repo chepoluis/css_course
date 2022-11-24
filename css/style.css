@@ -48,6 +48,11 @@ a:hover {
     text-decoration: none;
 }
 
+img {
+    /* Fill any reamining space inside of its parent (scale based on the screen side) */
+    width: 100%;
+}
+
 /* Background color divs */
 .section-plum {
     background-color: var(--plum);
@@ -239,6 +244,54 @@ nav [class*="fa-"]:hover {
     border-top: 1px solid var(--aqua);
     border-radius: 25px;
     padding: 1rem;
+}
+
+@media (min-width: 550px) {
+    #projects {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    article {
+        display: grid;
+        /* grid-template-columns: 1fr 1fr;  */ /* The screen is two fraction wide and each item get one of those fractions */
+        grid-template-columns: repeat(10, 1fr); /* 10 columns */
+        gap: 1rem;
+        padding-bottom: 40px;
+    }
+
+    #projects img {
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+
+    /* The image will be first, and then the text, beacuse text has order "2" (se va a sobreponer)*/
+    .text {
+        grid-column: 5/11;
+        grid-row: 1/2;
+        order: 2;
+        text-align: right;
+    }
+
+    #projects ul {
+        justify-content: flex-end;
+    }
+
+    /* Reverse */
+    #projects .reverse .text {
+        grid-column: 1/7;
+        order: 2;
+        text-align: left;
+    }
+
+    #projects .reverse img {
+        grid-column: 6/11;
+        grid-row: 1/2
+    }
+
+    #projects .reverse ul {
+        justify-content: flex-start;
+    }
 }
 
 /* Navbar responsive */
